@@ -1,0 +1,17 @@
+.btn {
+  padding: 10px 20px;
+  background-color: var(--color-pink);
+  border: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: Helvetica;
+  transition: 0.2s ease;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-pink-dark);
+}

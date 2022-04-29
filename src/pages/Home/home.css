@@ -1,0 +1,14 @@
+.home-view {
+  padding-top: 80px;
+}
+
+.home-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-items {
+  margin-top: 30px;
+}

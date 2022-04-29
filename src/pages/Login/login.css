@@ -1,0 +1,15 @@
+.login-view {
+  height: 100vh;
+}
+
+.login-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-view .logo,
+.login-view .title {
+  margin-bottom: 36px;
+}
