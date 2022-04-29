@@ -1,6 +1,5 @@
 import React from "react";
-import { navigate } from "@reach/router";
-import Button from "./../../components/Button";
+import { Link } from "@reach/router";
 import View from "../../components/View";
 import "./notFound.css";
 
@@ -9,7 +8,7 @@ const NotFound = (props) => {
     <View className="not-found-view">
       <h1>404</h1>
       <p>Oh, something went wrong! Please go back to the home page</p>
-      <Button handleClick={() => navigate("/")}>Go back</Button>
+      <Link to="/">Home</Link> <Link to="/videos">Videos</Link>
     </View>
   );
 };
