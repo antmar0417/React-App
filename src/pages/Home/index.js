@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "@reach/router";
 import Logo from "../../components/Logo";
 import View from "../../components/View";
+// import Navbar from "../../components/Navbar";
+
 import "./home.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
   return (
     <View className="home-view">
       <Logo size="small" style={{ marginBottom: "50px" }} />

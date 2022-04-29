@@ -1,8 +1,7 @@
 import React from "react";
-import View from "../../components/View";
+// import View from "../../components/View";
 import { Link } from "@reach/router";
 import { useState, useEffect } from "react";
-import YouTube from "react-youtube";
 
 const Pictures = (props) => {
   const [data, setData] = useState(null);

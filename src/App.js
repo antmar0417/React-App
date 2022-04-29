@@ -1,9 +1,12 @@
 import React from "react";
 import { Router } from "@reach/router";
 import themes from "./theme/themes";
-import ThemeIcon from "./components/ThemeIcon";
 
-// pages components
+// components
+import ThemeIcon from "./components/ThemeIcon";
+import Navbar from "./components/Navbar";
+
+// pages
 import HomePage from "./pages/Home";
 import PicturesPage from "./pages/Pictures";
 import VideosPage from "./pages/Videos";
@@ -20,6 +23,7 @@ const App = () => {
 
   return (
     <div className="App" style={themes[theme]}>
+      <Navbar />
       <ThemeIcon handleClick={toggleDarkMode} />
       <Router>
         <HomePage path="/" />
