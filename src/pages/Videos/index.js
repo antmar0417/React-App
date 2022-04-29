@@ -1,16 +1,40 @@
 import React from "react";
-import Logo from "../../components/Logo";
-import Title from "../../components/Title";
 import View from "../../components/View";
-import "./login.css";
+import "./videos.css";
 import { Link } from "@reach/router";
+import { useState, useEffect } from "react";
+import YouTube from "react-youtube";
 
 const Videos = (props) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://yrgo-assignment.herokuapp.com/entries`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`This is an HTTP error: The status is ${error}`);
+        }
+        return response.json();
+      })
+      .then((actualData) => {
+        console.log(actualData);
+        setData(actualData);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setData(null);
+      });
+  }, []);
+
   return (
     <View className="login-view">
-      <Logo size="small" style={{ marginBottom: "50px" }} />
-      <Title>Find your favorite video </Title>
       <Link to="/">Home</Link> <Link to="/videos">Videos</Link>
+      <div>
+        {data &&
+          data.map(({ _id, youtubeId }) => <YouTube videoId={youtubeId} />)}
+      </div>
     </View>
   );
 };
