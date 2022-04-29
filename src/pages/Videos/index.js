@@ -1,6 +1,4 @@
 import React from "react";
-// import Button from "../../components/Button";
-
 import Logo from "../../components/Logo";
 import Title from "../../components/Title";
 import View from "../../components/View";
