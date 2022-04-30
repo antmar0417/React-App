@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import moon from "./../../assets/images/moon.svg";
 import "./themeIcon.css";
 
 const ThemeIcon = (props) => {
   return (
-    <div className="theme-icon" onClick={props.handleClick}>
-      <img src={moon} alt="moon" />
-    </div>
+    <h1 className="theme-icon" onClick={props.handleClick}>
+      Theme<i className="fab fa-react"></i>
+    </h1>
   );
 };
 

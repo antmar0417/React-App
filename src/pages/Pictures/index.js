@@ -1,7 +1,7 @@
 import React from "react";
-// import View from "../../components/View";
-import { Link } from "@reach/router";
 import { useState, useEffect } from "react";
+import View from "../../components/View";
+import "./pictures.css";
 
 const Pictures = (props) => {
   const [data, setData] = useState(null);
@@ -32,23 +32,29 @@ const Pictures = (props) => {
   }, [query]);
 
   return (
-    <div>
-      <Link to="/">Home</Link>
-      <Link to="/videos">Videos</Link>
-      <Link to="/pictures">Pictures</Link>
-      <label>
-        <input
-          placeholder="Search"
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </label>
-      {data &&
-        data.map(({ id, description, urls }) => (
-          <img key={id} alt={description} src={urls.regular} />
-        ))}
-    </div>
+    <View className="pictures-view">
+      <div className="form">
+        <label>
+          <input
+            placeholder="Search"
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </label>
+      </div>
+      <div className="pictures-container">
+        {data &&
+          data.map(({ id, description, urls }) => (
+            <img
+              className="picture"
+              key={id}
+              alt={description}
+              src={urls.regular}
+            />
+          ))}
+      </div>
+    </View>
   );
 };
 

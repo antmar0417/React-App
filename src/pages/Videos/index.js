@@ -1,7 +1,6 @@
 import React from "react";
 import View from "../../components/View";
 import "./videos.css";
-import { Link } from "@reach/router";
 import { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
@@ -29,10 +28,7 @@ const Videos = (props) => {
   }, []);
 
   return (
-    <View className="login-view">
-      <Link to="/">Home</Link>
-      <Link to="/videos">Videos</Link>
-      <Link to="/pictures">Pictures</Link>
+    <View className="videos-view">
       <div>
         {data &&
           data.map(({ _id, youtubeId }) => <YouTube videoId={youtubeId} />)}
