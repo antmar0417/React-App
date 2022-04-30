@@ -14,7 +14,6 @@
 .navbar-logo {
   color: aliceblue;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -28,8 +27,9 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 70vw;
+  width: 80vw;
   justify-content: end;
+  margin-left: 150px;
 }
 
 .nav-links {
@@ -71,6 +71,7 @@
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    margin-left: 0px;
   }
 
   .nav-menu.active {
