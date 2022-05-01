@@ -11,7 +11,7 @@ const Pictures = (props) => {
   useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos?query=${query}`, {
       headers: {
-        Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_KEY}`,
+        Authorization: `Client-ID rz1sOP9m_lUkfn_RWgGzR7KwkugLex27v-Kscv3i8m0`,
       },
     })
       .then((response) => {
