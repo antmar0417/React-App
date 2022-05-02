@@ -1,7 +1,37 @@
-.videos-view {
+.text {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 30px 0px 30px 0px;
+}
+
+.rendered-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+iframe {
+  width: 658px;
+  height: 370px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 960px) {
+  .rendered-videos {
+    padding-top: 0px;
+  }
+
+  .text {
+    padding: 30px 0px 20px 0px;
+  }
+
+  iframe {
+    width: auto;
+    height: auto;
+    padding-bottom: 20px;
+  }
 }

@@ -44,10 +44,6 @@
   transition: all 0.2s ease-out;
 }
 
-.fa-bars {
-  color: aliceblue;
-}
-
 .nav-links-mobile {
   display: none;
 }
@@ -113,5 +109,11 @@
   .fa-times {
     color: aliceblue;
     font-size: 2rem;
+    margin-top: 3px;
+  }
+
+  .fa-bars {
+    color: aliceblue;
+    margin-top: 5px;
   }
 }

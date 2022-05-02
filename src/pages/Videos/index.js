@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import YouTube from "react-youtube";
 
 // Components
 import View from "../../components/View";
@@ -32,11 +31,20 @@ const Videos = (props) => {
 
   return (
     <View className="videos-view">
-      <Text>Find your favorite videos </Text>
-      <div>
-        {data &&
-          data.map(({ _id, youtubeId }) => <YouTube videoId={youtubeId} />)}
-      </div>
+      <Text className="text">Find your favorite videos </Text>
+      {data &&
+        data.map(({ _id, youtubeId }) => (
+          <div className="rendered-videos" key={_id}>
+            <iframe
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Youtube player"
+              sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+              src={`https://youtube.com/embed/${youtubeId}?autoplay=0`}
+            ></iframe>
+          </div>
+        ))}
     </View>
   );
 };

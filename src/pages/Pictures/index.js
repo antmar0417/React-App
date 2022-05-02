@@ -36,7 +36,7 @@ const Pictures = (props) => {
 
   return (
     <View className="pictures-view">
-      <Text>Find your favorite pictures </Text>
+      <Text className="text">Find your favorite pictures </Text>
       <div className="form">
         <label>
           <input
