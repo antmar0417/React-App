@@ -28,15 +28,17 @@ const SeasonDisplay = (props) => {
   const { text, iconName } = seasonConfig[season];
   return (
     <View className="home-view">
-      <div className={`season-display ${season}`}>
-        <i className={`${iconName}`} />
-        <h2 className="location">{text}</h2>
-        <p className="date">
-          <Date1 />
-        </p>
-        <h1 className="clock">
-          <Clock />
-        </h1>
+      <div className="wrapper fadeInDown">
+        <div className={`season-display ${season}`}>
+          <i className={`${iconName}`} />
+          <h2 className="location">{text}</h2>
+          <p className="date">
+            <Date1 />
+          </p>
+          <h1 className="clock">
+            <Clock />
+          </h1>
+        </div>
       </div>
     </View>
   );
