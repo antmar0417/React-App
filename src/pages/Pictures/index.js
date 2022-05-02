@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
+// Components
 import View from "../../components/View";
 import Text from "../../components/Text";
 import "./pictures.css";

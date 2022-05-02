@@ -8,9 +8,6 @@ const NotFound = (props) => {
     <View className="not-found-view">
       <h1>404</h1>
       <p>Oh, something went wrong! Please go back to the home page</p>
-      <Link to="/">Home</Link>
-      <Link to="/videos">Videos</Link>
-      <Link to="/pictures">Pictures</Link>
     </View>
   );
 };
