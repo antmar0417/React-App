@@ -1,8 +1,11 @@
 import React from "react";
-import View from "../../components/View";
-import "./videos.css";
 import { useState, useEffect } from "react";
 import YouTube from "react-youtube";
+
+// Components
+import View from "../../components/View";
+import Text from "../../components/Text";
+import "./videos.css";
 
 const Videos = (props) => {
   const [data, setData] = useState(null);
@@ -29,6 +32,7 @@ const Videos = (props) => {
 
   return (
     <View className="videos-view">
+      <Text>Find your favorite videos </Text>
       <div>
         {data &&
           data.map(({ _id, youtubeId }) => <YouTube videoId={youtubeId} />)}

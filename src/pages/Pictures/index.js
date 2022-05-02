@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import View from "../../components/View";
+import Text from "../../components/Text";
 import "./pictures.css";
 
 const Pictures = (props) => {
@@ -11,7 +12,7 @@ const Pictures = (props) => {
   useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos?query=${query}`, {
       headers: {
-        Authorization: `Client-ID rz1sOP9m_lUkfn_RWgGzR7KwkugLex27v-Kscv3i8m0`,
+        Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_KEY}`,
       },
     })
       .then((response) => {
@@ -33,9 +34,11 @@ const Pictures = (props) => {
 
   return (
     <View className="pictures-view">
+      <Text>Find your favorite pictures </Text>
       <div className="form">
         <label>
           <input
+            className="input"
             placeholder="Search"
             type="text"
             value={query}

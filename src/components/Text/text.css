@@ -1,0 +1,5 @@
+.text {
+  font-size: var(--h1);
+  color: var(--color-font);
+  font-weight: 800;
+}
