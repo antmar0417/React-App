@@ -9,8 +9,8 @@ class Clock extends React.Component {
     }, 1000);
   }
   render() {
-    if (this.state.time) return <div className="time">{this.state.time}</div>;
-    else return <div>Loading...</div>;
+    if (this.state.time) return <>{this.state.time}</>;
+    else return <>Loading...</>;
   }
 }
 export default Clock;

@@ -33,11 +33,11 @@ class Date1 extends React.Component {
   render() {
     if (this.state.month && this.state.day && this.state.year)
       return (
-        <div className="date">
+        <>
           Date: {this.state.month} {this.state.day}, {this.state.year}
-        </div>
+        </>
       );
-    else return <div>Loading...</div>;
+    else return <>Loading...</>;
   }
 }
 export default Date1;
