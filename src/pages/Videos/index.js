@@ -37,7 +37,6 @@ const Videos = (props) => {
           <div className="rendered-videos" key={_id}>
             <iframe
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Youtube player"
               sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
