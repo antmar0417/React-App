@@ -24,7 +24,6 @@ const Pictures = (props) => {
         return response.json();
       })
       .then((actualData) => {
-        console.log(actualData);
         setData(actualData.results);
         setError(null);
       })

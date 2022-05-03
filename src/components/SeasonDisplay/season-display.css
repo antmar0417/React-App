@@ -12,9 +12,9 @@
   align-items: center;
   height: 400px;
   width: 300px;
-  border-radius: 10px;
   flex-direction: column;
   position: relative;
+  border-radius: 3px;
 }
 
 .season-display.winter i {
@@ -48,6 +48,10 @@
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  border: 0.5px solid rgba(12, 72, 210, 0.3);
+  border-radius: 4px;
 }
 
 @keyframes fadeInDown {
