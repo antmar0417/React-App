@@ -19,7 +19,6 @@ const Videos = (props) => {
         return response.json();
       })
       .then((actualData) => {
-        console.log(actualData);
         setData(actualData);
         setError(null);
       })
