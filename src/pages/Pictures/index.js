@@ -8,7 +8,6 @@ import "./pictures.css";
 
 const Pictures = (props) => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -18,18 +17,10 @@ const Pictures = (props) => {
       },
     })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`This is an HTTP error: The status is ${error}`);
-        }
         return response.json();
       })
       .then((actualData) => {
         setData(actualData.results);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setData(null);
       });
   }, [query]);
 
