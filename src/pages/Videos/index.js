@@ -10,7 +10,7 @@ const Videos = (props) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(`https://yrgo-assignment.herokuapp.com/entries`)
+    fetch("https://yrgo-assignment.herokuapp.com/entries/")
       .then((response) => {
         return response.json();
       })
