@@ -8,23 +8,14 @@ import "./videos.css";
 
 const Videos = (props) => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(`https://yrgo-assignment.herokuapp.com/entries`)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`This is an HTTP error: The status is ${error}`);
-        }
         return response.json();
       })
       .then((actualData) => {
         setData(actualData);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setData(null);
       });
   }, []);
 
