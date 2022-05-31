@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import View from "../../components/View";
 import Text from "../../components/Text";
 import "./videos.css";
+import YoutubeEmbed from "../../components/YoutubeEmbed";
 
 const Videos = (props) => {
   const [data, setData] = useState(null);
@@ -25,13 +26,7 @@ const Videos = (props) => {
       {data &&
         data.map(({ _id, youtubeId }) => (
           <div className="rendered-videos" key={_id}>
-            <iframe
-              frameBorder="0"
-              allowFullScreen
-              title="Youtube player"
-              sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
-              src={`https://youtube.com/embed/${youtubeId}?autoplay=0`}
-            ></iframe>
+            <YoutubeEmbed embedId={youtubeId} />
           </div>
         ))}
     </View>
