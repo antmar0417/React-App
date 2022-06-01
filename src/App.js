@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 // pages
 import HomePage from "./pages/Home";
 import PicturesPage from "./pages/Pictures";
-import VideosPage from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 
