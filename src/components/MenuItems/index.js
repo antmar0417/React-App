@@ -5,11 +5,6 @@ const MenuItems = [
     cName: "nav-links",
   },
   {
-    title: "Videos",
-    url: "/videos",
-    cName: "nav-links",
-  },
-  {
     title: "Pictures",
     url: "/pictures",
     cName: "nav-links",

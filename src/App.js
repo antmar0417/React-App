@@ -27,7 +27,6 @@ const App = () => {
       <ThemeIcon handleClick={toggleDarkMode} />
       <Router>
         <HomePage path="/" />
-        <VideosPage path="/videos" />
         <PicturesPage path="/pictures" />
         <NotFound default />
       </Router>
